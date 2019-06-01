@@ -8,7 +8,7 @@ docker-run:
 	sudo docker run -it -p 8000:8000 dev/aporter
 
 test:
-	pytest -rav tests
+	pytest --disable-pytest-warnings tests
 
 clean:
 	rm -rf *.pyc
