@@ -1,6 +1,11 @@
-from flask import Flask
+from flask import Flask, redirect
 
 from .views.main_view import main_bp
+
+
+def page_not_found(e):
+    """Custom error handling for 404"""
+    return redirect("/")
 
 
 def create_app():
@@ -8,6 +13,7 @@ def create_app():
     app.config.from_object("app.config")
     app.register_blueprint(main_bp)
     app.app_context().push()  # this is needed for application global context
+    app.register_error_handler(404, page_not_found)
     return app
 
 
