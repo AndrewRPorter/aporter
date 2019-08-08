@@ -20,5 +20,5 @@ def projects() -> Response:
 @main_bp.route("/photography", methods=["GET", "POST"])
 def photos() -> Response:
     """Defines the view to show images"""
-    images = crawler.get_images()
-    return render_template("photography.html", images=images)
+    # images = crawler.get_images()
+    return render_template("photography.html", images=None)
