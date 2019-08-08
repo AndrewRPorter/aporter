@@ -11,14 +11,20 @@ def index() -> Response:
     return render_template("index.html")
 
 
-@main_bp.route("/about", methods=["GET", "POST"])
-def about() -> Response:
-    """Defines the view for the about section"""
-    return render_template("about.html")
+@main_bp.route("/projects", methods=["GET", "POST"])
+def projects() -> Response:
+    """Defines the view to show my programming projects"""
+    return render_template("projects.html")
 
 
-@main_bp.route("/photos", methods=["GET", "POST"])
+@main_bp.route("/photography", methods=["GET", "POST"])
 def photos() -> Response:
     """Defines the view to show images"""
     images = crawler.get_images()
-    return render_template("photos.html", images=images)
+    return render_template("photography.html", images=images)
+
+
+@main_bp.route("/contact", methods=["GET", "POST"])
+def contact() -> Response:
+    """Defines the view for the contact section"""
+    return render_template("contact.html")

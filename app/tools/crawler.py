@@ -3,7 +3,7 @@ from typing import Dict
 
 import yaml
 
-PHOTO_DIR = os.path.join(os.getcwd(), "app/static/pictures")  # create absolute path
+PHOTO_DIR = os.path.join(os.getcwd(), "app/static/pictures")
 
 
 def get_images() -> Dict[str, Dict]:

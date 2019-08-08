@@ -3,16 +3,168 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Andrew Porter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Andrew Porter">
+
+    <title>Andrew R. Porter</title>
+
+    <link rel="canonical" href="https://www.aporter.me">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+
+
 </head>
 
 <body>
-    <p>Andrew R. Porter</p>
-</body>
+    {% with active="/" %} {% include "nav.html" %} {% endwith %}
+
+    <main role="main">
+
+        <div id="myCarousel" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="bd-placeholder-img" height="100%" width="100%"
+                        src="{{ url_for('static', filename='img/background.jpg') }}" alt="Background image">
+                    <div class="container text-center">
+                        <div class="carousel-caption">
+                            <h1>Andrew Porter</h1>
+                            <p>Senior Computer Science Major at the University of New Hampshire</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container marketing">
+
+            <!-- About -->
+            <div class="row">
+                <p class="about text-center">Current student at the University of New Hampshire, pursuing a degree in
+                    Computer Science.
+                    Interested in a career in the Financial Technology Industry. Furthering my passion for the stock
+                    market through development of various investment applications and extensive research on the
+                    financial system.
+                    Outgoing, driven individual with a desire to make a lasting impact on those I am surrounded with.
+                    Hope to continue furthering my education in both the Computer Science field and the Financial
+                    Technology Industry.</p>
+                <div class="links col-md-2">
+                    <a href="https://github.com/AndrewRPorter" target="_blank">
+                        <span>
+                            <object data="{{ url_for('static', filename='assets/fa/github.svg') }}" type="image/svg+xml"
+                                height="70px" width="70px"></object>
+                        </span>
+                        <h4>GitHub</h4>
+                    </a>
+                </div> <!-- GitHub -->
+                <div class="links col-md-2">
+                    <a href="https://www.linkedin.com/in/andrew-porter/" target="_blank">
+                        <span>
+                            <object data="{{ url_for('static', filename='assets/fa/linkedin.svg') }}"
+                                type="image/svg+xml" height="70px" width="70px"></object>
+                        </span>
+                        <h4>LinkedIn</h4>
+                    </a>
+                </div> <!-- LinkedIn -->
+                <div class="links col-md-2">
+                    <a href="https://stackoverflow.com/users/8168077/aporter1031?tab=profile" target="_blank">
+                        <span>
+                            <object data="{{ url_for('static', filename='assets/fa/stack-overflow.svg') }}"
+                                type="image/svg+xml" height="70px" width="70px"></object>
+                        </span>
+                        <h4>StackOverflow</h4>
+                    </a>
+                </div> <!-- StackOverflow -->
+                <div class="links col-md-2">
+                    <a href="mailto:porter.r.andrew@gmail.com" target="_blank">
+                        <span>
+                            <object data="{{ url_for('static', filename='assets/fa/envelope.svg') }}"
+                                type="image/svg+xml" height="70px" width="70px"></object>
+                        </span>
+                        <h4>Email</h4>
+                    </a>
+                </div> <!-- Email -->
+            </div> <!-- About -->
+
+            <!-- Work Experience -->
+            <hr class="divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Bottomline Technologies<br><span class="text-muted">Software Engineer
+                            Intern</span></h2>
+                    <p class="lead">Utilized Mockito framework to develop unit tests for back-end utilities.
+                        Developed interactive RESTful API documentation with Swagger.
+                        Investigated and resolved several CSRF vulnerabilities.
+                        Resolved legacy static code analysis violations (SONAR).</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="bd-placeholder-img" src="{{ url_for('static', filename='img/bottomline.jpg') }}"
+                        alt="Bottomline Technologies, Inc.">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">University of New Hampshire<br><span class="text-muted">Undergraduate
+                            Research Assistant</span></h2>
+                    <p class="lead">Worked on interdisciplinary research projects that combine Computer Science and
+                        Cognitive Psychology to model and examine how people think/learn.
+                        Utilized Natural Language Processing (NLP) tools like Sumy, TextBlob and NLTK in Python.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="bd-placeholder-img" src="{{ url_for('static', filename='img/unh.jpg') }}"
+                        alt="University of New Hampshire">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">EFI<br><span class="text-muted">Software Engineer Intern</span></h2>
+                    <p class="lead">Interpolated YAML and XML messages with C++ and Python to support localization
+                        within printer UI.
+                        Connected to MySQL database to keep track of languages currently in use.
+                        Migrated python2 code to python3. Used python to analyze and reduce log dumps.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="bd-placeholder-img" src="{{ url_for('static', filename='img/efi.jpg') }}"
+                        alt="Electronics For Imaging, Inc. All Rights Reserved.">
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Allegro MicroSystems<br><span class="text-muted">Software Engineer
+                            Intern</span></h2>
+                    <p class="lead">Created a GUI in Python with the PyQt4 module to generate Verilog code using Jinja2,
+                        used to model electronic systems.
+                        Developed a project management tool which was used to keep several local git repositories up to
+                        date with its remote, automatically.
+                        Converted legacy tcl scripts into class based Python scripts. Worked with git on a daily basis
+                        in a Debian environment.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="bd-placeholder-img" src="{{ url_for('static', filename='img/allegro.png') }}"
+                        alt="Allegro MicroSystems, Inc.">
+                </div>
+            </div>
+
+            <hr class="divider">
+
+        </div>
+
+        {% include "footer.html" %}
+    </main>
+
 </html>
