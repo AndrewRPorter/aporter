@@ -2,21 +2,7 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Andrew Porter">
-
-    <title>Andrew R. Porter</title>
-
-    <link rel="icon" href="{{ url_for('static', filename='img/icon.png') }}">
-    <link rel="canonical" href="https://www.aporter.me">
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% include "head.html" %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
 </head>
 

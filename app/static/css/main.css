@@ -4,6 +4,17 @@ body {
     color: #5a5a5a;
 }
 
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: "Noto Serif", serif;
+	font-size: 100%;
+	line-height: 1.5;
+}
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
