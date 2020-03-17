@@ -8,5 +8,5 @@ Technologies
 
 - flask
 - docker
+- docker-compose
 - gunicorn
-- digitalocean
