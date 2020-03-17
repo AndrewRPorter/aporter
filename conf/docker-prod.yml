@@ -20,7 +20,7 @@ services:
         command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
     certbot:
         image: certbot/certbot
-        container_name: certbot
+        container_name: certs
         restart: unless-stopped
         volumes:
             - ./certbot/conf:/etc/letsencrypt
@@ -28,7 +28,7 @@ services:
         entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
     flask:
         build:
-            context: ../
+            context: ./
             dockerfile: Dockerfile
         container_name: flask
         command: gunicorn app.wsgi --bind 0.0.0.0:443 --workers 4
