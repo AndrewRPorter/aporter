@@ -1,3 +1,6 @@
+[![Build Status](https://api.travis-ci.com/AndrewRPorter/aporter.svg?branch=master)](https://travis-ci.com/AndrewRPorter/aporter)
+
+
 aporter
 =======
 
@@ -8,5 +11,5 @@ Technologies
 
 - flask
 - docker
+- docker-compose
 - gunicorn
-- digitalocean
