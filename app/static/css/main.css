@@ -1,42 +1,43 @@
-body {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    color: #5a5a5a;
+html, body {
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
 }
 
-body,
-button,
-input,
-select,
-textarea {
-	color: #404040;
-	font-family: "Noto Serif", serif;
-	font-size: 100%;
-	line-height: 1.5;
+#title {
+    color: black;
+    position: absolute;
+    top: 33%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: "lato", sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin-top: -60px;
+    padding-left: 10px;
 }
 
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+#name {
+    font-weight: 900;
+    font-size: 36px;
 }
 
-@media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-        font-size: 4.5rem;
-    }
+#topics {
+    font-weight: 500;
+    color: black;
 }
 
-.about {
-    font-weight: 400;
-    font-size: 24px;
-    margin-bottom: 4rem;
+#about {
+    font-weight: 500;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .links {
+    font-weight: 200;
+    font-size: 18px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -63,13 +64,8 @@ textarea {
     color: black;
 }
 
-
-/* Space out the Bootstrap <hr> more */
-
-.divider {
-    margin: 4rem 0;
-}
-
-footer {
-    margin-top: 2rem;
+.bottom {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
 }

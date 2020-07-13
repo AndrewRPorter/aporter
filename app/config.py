@@ -1,1 +1,1 @@
-SECRET_KEY = "8uygfJ6Oc2FJo6RNXK3BVCgrWtjdMT2X"
+SECRET_KEY = "super-secret-key"
