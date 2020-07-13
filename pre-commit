@@ -1,0 +1,34 @@
+#!/bin/sh
+
+flake8 .
+
+if [ $? -ne 0 ]
+then
+  echo "failed to create commit"
+  exit 1
+fi
+
+pytest -q --disable-pytest-warnings tests
+if [ $? -ne 0 ]
+then
+  echo "failed to create commit"
+  exit 1
+fi
+
+black . --check --quiet --line-length 120
+
+if [ $? -ne 0 ]
+then
+  black . --line-length 120 -q
+  echo "failed to create commit"
+  exit 1
+fi
+
+isort --check-only --quiet
+
+if [ $? -ne 0 ]
+then
+  isort --atomic --apply -q
+  echo "failed to create commit"
+  exit 1
+fi
