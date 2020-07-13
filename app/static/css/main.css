@@ -74,6 +74,7 @@ html, body {
 @media only screen and (max-device-width: 500px) {
     html, body {
         overflow-y: auto;
+        overflow-x: hidden;
     }
 
     #title {
